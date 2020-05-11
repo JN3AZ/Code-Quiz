@@ -27,7 +27,7 @@ var questions = [{
     "option4": "parentheses",
     "answer": "3",
 },{
-    "question": "A very useful tool used during development and debugging for printing content to the debugger is:",
+    "question": "A useful tool used for development and debugging for printing content to the debugger:",
     "option1": "Javascript",
     "option2": "terminal/bash",
     "option3": "for loops",

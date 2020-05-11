@@ -11,6 +11,21 @@ var opt4 = document.getElementById('opt4');
 var nextButton = document.getElementById('nextButton');
 var resultCont = document.getElementById('result');
 
+var time = 100;
+var $timer = document.querySelector("#timer");
+
+   $timer.textContent = time;
+   var timer = setInterval(function () {
+       time--;
+       $timer.textContent = time;
+
+       if (time === 0) {
+           clearInterval(timer);
+           endGame();
+       }
+ }, 1000);
+
+
 function loadQuestion (questionIndex) {
     var q = questions [questionIndex];
     questionEl.textContent = (questionIndex +1) + '. '+ q.question;
