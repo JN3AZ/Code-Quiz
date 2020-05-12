@@ -5,7 +5,7 @@ body{
 }
 
 .container{
-    height: 330px;
+    /* height: 330px; */
     width: 1000px;
     position: absolute;
     top:50%;
@@ -69,7 +69,7 @@ body{
 }
 
 .result{
-    height: 100px;
+    /* height: 100px; */
     text-align: center;
     font-size: 75px;
 }
@@ -79,9 +79,23 @@ body{
     color: #000000;
 }
 
-.timer {
+#timer {
     position: fixed;
-    top: 0;
-    right: 0;
-    
+    top: 30px;
+    right: 30px;
+    font-size: 45px;
+}
+
+.time-left {
+    position: fixed;
+    top: 30px;
+    right: 95px;
+    font-size: 45px;
+
+
+}
+.highscore {
+    position: fixed;
+    top: 30px;
+    font-size: 45px;
 }
