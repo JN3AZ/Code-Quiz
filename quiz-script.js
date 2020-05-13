@@ -62,3 +62,28 @@ function loadNextQuestion() {
 }
 
 loadQuestion(currentQuestion);
+ //reveal total at the end 
+function endGame() {
+ Questionsdiv.setAttribute("hidden", "true");
+ EndScreen.removeAttribute("hidden");
+ finalscore.textContent = score + "/" + questions.length;
+
+}
+
+var initials = document.getElementById("initials")
+var highscores = document.getElementById("highscores");
+
+initials.addEventListener("click", function (event) {
+  window.location.href = "score.html"
+})
+
+
+var highscores = localStorage.getItem("highscores");
+    if(highscores){
+      highscores = JSON.parse(highscores);
+    }else {
+        highscores = [];
+    }
+
+
+

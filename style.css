@@ -72,6 +72,7 @@ body{
     /* height: 100px; */
     text-align: center;
     font-size: 75px;
+    color: gold;
 }
 
 .option input:checked .option{
@@ -81,21 +82,21 @@ body{
 
 #timer {
     position: fixed;
-    top: 30px;
+    top: 25px;
     right: 30px;
-    font-size: 45px;
+    font-size: 25px;
 }
 
 .time-left {
     position: fixed;
-    top: 30px;
+    top: 25px;
     right: 95px;
-    font-size: 45px;
+    font-size: 25px;
 
 
 }
 .highscore {
     position: fixed;
-    top: 30px;
-    font-size: 45px;
+    top: 25px;
+    font-size: 25px;
 }

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Congrats!</title>
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container">
+      <div id="end" class="flex-center flex-colomn">
+        <h1 id="finalscore">0</h1>
+        <form>
+          <input
+            type="text"
+            name="username"
+            id="username"
+            placeholder="username"
+          />
+          <button
+            type="submit"
+            class="btn"
+            id="saveScoreBtn"
+            onclick="saveHighScore(event)"
+          >
+            Save
+          </button>
+        </form>
+        <a class="btn" href="index.html">Play Again</a>
+      </div>
+    </div>
+
+    <div id="scorescreen" class="hide" hidden="true">
+      <h1>Highscores</h1>
+      <ul id="highscores"></ul>
+      <button>Go Back</button> <button>Clear Highscores</button>
+    </div>
+
+    <script src="quiz-script.js"></script>
+  </body>
+</html>
