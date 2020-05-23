@@ -21,7 +21,6 @@ var timer = setInterval(function () {
 
   if (time === 0) {
     clearInterval(timer);
-    endGame();
   }
 }, 1000);
 
@@ -56,34 +55,34 @@ function loadNextQuestion() {
     container.style.display = "none";
     resultCont.style.display = "";
     resultCont.textContent = "Your Score: " + score;
-    return;
+    localStorage.setItem("score", score)
+    setTimeout(function (){
+      window.location = "score.html";
+      
+    }, 3000)
+
   }
   loadQuestion(currentQuestion);
 }
 
 loadQuestion(currentQuestion);
- //reveal total at the end 
+//reveal total at the end
 function endGame() {
- Questionsdiv.setAttribute("hidden", "true");
- EndScreen.removeAttribute("hidden");
- finalscore.textContent = score + "/" + questions.length;
-
+  Questionsdiv.setAttribute("hidden", "true");
+  EndScreen.removeAttribute("hidden");
+  finalscore.textContent = score + "/" + questions.length;
 }
 
-var initials = document.getElementById("initials")
+var initials = document.getElementById("initials");
 var highscores = document.getElementById("highscores");
 
 initials.addEventListener("click", function (event) {
-  window.location.href = "score.html"
-})
-
+  window.location.href = "score.html";
+});
 
 var highscores = localStorage.getItem("highscores");
-    if(highscores){
-      highscores = JSON.parse(highscores);
-    }else {
-        highscores = [];
-    }
-
-
-
+if (highscores) {
+  highscores = JSON.parse(highscores);
+} else {
+  highscores = [];
+}
